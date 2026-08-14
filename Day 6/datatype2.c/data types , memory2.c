@@ -1,3 +1,4 @@
+// Day 6 - C Programming
 #include <stdio.h>
 
 int main()
