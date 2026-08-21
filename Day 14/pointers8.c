@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int arraySum(int *ptr, int size)
+float arrayAverage(int *ptr, int size)
 {
     int sum = 0;
 
@@ -9,16 +9,16 @@ int arraySum(int *ptr, int size)
         sum = sum + *(ptr + i);
     }
 
-    return sum;
+    return (float)sum / size;
 }
 
 int main()
 {
     int numbers[5] = {10, 20, 30, 40, 50};
 
-    int result = arraySum(numbers, 5);
+    float result = arrayAverage(numbers, 5);
 
-    printf("Sum = %d\n", result);
+    printf("Average = %.2f\n", result);
 
     return 0;
 }
