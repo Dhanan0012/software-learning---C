@@ -16,12 +16,14 @@ int main()
         {"Apoorva", 20, 91.5}
     };
 
+    struct Student *ptr = students;
+
     for(int i = 0; i < 3; i++)
     {
         printf("Student %d\n", i + 1);
-        printf("Name = %s\n", students[i].name);
-        printf("Age = %d\n", students[i].age);
-        printf("Marks = %.2f\n\n", students[i].marks);
+        printf("Name = %s\n", (ptr + i)->name);
+        printf("Age = %d\n", (ptr + i)->age);
+        printf("Marks = %.2f\n\n", (ptr + i)->marks);
     }
 
     return 0;
